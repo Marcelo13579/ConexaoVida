@@ -1,2 +1,0 @@
-# Eleicoes
-Site Laravel Eleições

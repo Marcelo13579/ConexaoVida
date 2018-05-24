@@ -21,7 +21,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::get('/inicio',[
+Route::any('inicio',[
    'as' => 'inicio',
    'uses' => 'HomeController@inicio'
 ]);
+
+Route::any('sobre',[
+   'as' => 'sobre',
+   'uses' => 'HomeController@sobre'
+]);
+

@@ -23,18 +23,6 @@
         <link href="../../../public/css/bootstrap.min.css" rel="stylesheet">
 
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        
-        <style>
-            
-            body{
-                background: url("img/fundosite.png") no-repeat center center fixed;
-                background-size: cover;
-                -webkit-background-size: cover; /* SAFARI / CHROME */
-                -moz-background-size: cover; /* FIREFOX */
-                -ms-background-size: cover; /* IE */
-                -o-background-size: cover; /* OPERA */
-            }
-        </style>
 
     </head>
     <body>
@@ -45,7 +33,7 @@
                         <img src="{{ asset('img/conexãovidamenu.png') }}">
                     </div>
                     <li><a href="{{ route('inicio') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Início</a></li>
-                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Sobre</a></li>
+                    <li><a href="{{ route('sobre') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Sobre</a></li>
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Sangue</a></li>
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Orgãos</a></li>
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Sangue</a></li>

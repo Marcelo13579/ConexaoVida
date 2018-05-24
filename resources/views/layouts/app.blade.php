@@ -23,6 +23,18 @@
         <link href="../../../public/css/bootstrap.min.css" rel="stylesheet">
 
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        
+        <style>
+            
+            body{
+                background: url("img/fundosite.png") no-repeat center center fixed;
+                background-size: cover;
+                -webkit-background-size: cover; /* SAFARI / CHROME */
+                -moz-background-size: cover; /* FIREFOX */
+                -ms-background-size: cover; /* IE */
+                -o-background-size: cover; /* OPERA */
+            }
+        </style>
 
     </head>
     <body>
@@ -36,6 +48,9 @@
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Sobre</a></li>
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Sangue</a></li>
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Orgãos</a></li>
+                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Sangue</a></li>
+                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Orgãos</a></li>
+                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">E-mail</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -45,10 +60,14 @@
         
         @yield('content')   
         
+        <div style="padding-top: 10px;"></div>
         <div style="position: relative; left: 0; bottom: 0; width: 100%; text-align: center; background-color: #282a2b; color: white; padding-top: 10px;">
             <p>Idealizado e alimentado pelo Programa de Extensão em Saúde Integrada</p>
+            <div style="padding-top: 10px;"></div>
             <p>Desenvolvido pelos acadêmicos do curso de Análise e Desenvolvimento de Sistemas</p>
+            <div style="padding-top: 10px;"></div>
             <p>Mantido pela Faculdade CNEC Santo Ângelo</p>
+            <div style="padding-top: 10px;"></div>
             <p>Todos os direitos reservados ©</p>
         </div>
     </body>

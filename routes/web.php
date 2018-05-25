@@ -31,3 +31,8 @@ Route::any('sobre',[
    'uses' => 'HomeController@sobre'
 ]);
 
+Route::any('cadastrosangue',[
+   'as' => 'cadastrosangue',
+   'uses' => 'HomeController@cadastrosangue'
+]);
+

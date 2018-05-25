@@ -23,6 +23,24 @@
         <link href="../../../public/css/bootstrap.min.css" rel="stylesheet">
 
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        
+        <script type="text/javascript">
+            var _paq = _paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = "//kraft.ads.cnecsan.edu.br/piwik/";
+                _paq.push(['setTrackerUrl', u + 'piwik.php']);
+                _paq.push(['setSiteId', '6']);
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.type = 'text/javascript';
+                g.async = true;
+                g.defer = true;
+                g.src = u + 'piwik.js';
+                s.parentNode.insertBefore(g, s);
+            })();
+        </script>
 
     </head>
     <body>
@@ -34,7 +52,7 @@
                     </div>
                     <li><a href="{{ route('inicio') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Início</a></li>
                     <li><a href="{{ route('sobre') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Sobre</a></li>
-                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Sangue</a></li>
+                    <li><a href="{{ route('cadastrosangue') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Sangue</a></li>
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Orgãos</a></li>
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Sangue</a></li>
                     <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Orgãos</a></li>

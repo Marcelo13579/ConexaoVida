@@ -23,24 +23,6 @@
         <link href="../../../public/css/bootstrap.min.css" rel="stylesheet">
 
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        
-        <script type="text/javascript">
-            var _paq = _paq || [];
-            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
-            (function () {
-                var u = "//kraft.ads.cnecsan.edu.br/piwik/";
-                _paq.push(['setTrackerUrl', u + 'piwik.php']);
-                _paq.push(['setSiteId', '6']);
-                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-                g.type = 'text/javascript';
-                g.async = true;
-                g.defer = true;
-                g.src = u + 'piwik.js';
-                s.parentNode.insertBefore(g, s);
-            })();
-        </script>
 
     </head>
     <body>
@@ -63,9 +45,9 @@
                 </ul>
             </div>
         </nav>
-        
+
         @yield('content')   
-        
+
         <div style="padding-top: 10px;"></div>
         <div style="position: relative; left: 0; bottom: 0; width: 100%; text-align: center; background-color: #282a2b; color: white; padding-top: 10px;">
             <p>Idealizado e alimentado pelo Programa de Extensão em Saúde Integrada</p>
@@ -78,3 +60,21 @@
         </div>
     </body>
 </html>
+
+<script type="text/javascript">
+var _paq = _paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function () {
+    var u = "//kraft.ads.cnecsan.edu.br/piwik/";
+    _paq.push(['setTrackerUrl', u + 'piwik.php']);
+    _paq.push(['setSiteId', '6']);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript';
+    g.async = true;
+    g.defer = true;
+    g.src = u + 'piwik.js';
+    s.parentNode.insertBefore(g, s);
+})();
+</script>

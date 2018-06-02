@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Conexão Vida</title>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -35,13 +35,14 @@
                     <li><a href="{{ route('inicio') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Início</a></li>
                     <li><a href="{{ route('sobre') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Sobre</a></li>
                     <li><a href="{{ route('cadastrosangue') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Sangue</a></li>
-                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Orgãos</a></li>
-                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Sangue</a></li>
-                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Orgãos</a></li>
-                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">E-mail</a></li>
+                    <li><a href="{{ route('cadastroorgaos') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Orgãos</a></li>
+                    <li><a href="{{ route('doadoressangue') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Sangue</a></li>
+                    <li><a href="{{ route('doadoresorgaos') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Orgãos</a></li>
+                    <li><a href="{{ route('email') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">E-mail</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="{{ route('loginadm') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="{{ route('sair') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> Sair</a></li>
                 </ul>
             </div>
         </nav>

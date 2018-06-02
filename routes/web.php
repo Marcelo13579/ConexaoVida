@@ -36,3 +36,33 @@ Route::any('cadastrosangue',[
    'uses' => 'HomeController@cadastrosangue'
 ]);
 
+Route::any('cadastroorgaos',[
+   'as' => 'cadastroorgaos',
+   'uses' => 'HomeController@cadastroorgaos'
+]);
+
+Route::any('doadoressangue',[
+   'as' => 'doadoressangue',
+   'uses' => 'HomeController@doadoressangue'
+]);
+
+Route::any('doadoresorgaos',[
+   'as' => 'doadoresorgaos',
+   'uses' => 'HomeController@doadoresorgaos'
+]);
+
+Route::any('email',[
+   'as' => 'email',
+   'uses' => 'HomeController@email'
+]);
+
+Route::any('sair',[
+   'as' => 'sair',
+   'uses' => 'HomeController@sair'
+]);
+
+Route::any('loginadm',[
+   'as' => 'loginadm',
+   'uses' => 'HomeController@loginadm'
+]);
+

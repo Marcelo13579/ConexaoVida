@@ -35,11 +35,43 @@ class HomeController extends Controller
     
     public function sobre() {
         
-        return view('about');
+        return view('sobre');
     }
     
     public function cadastrosangue() {
         
-        return view('registerblood');
+        return view('cadastrosangue');
     }
+    
+    public function cadastroorgaos() {
+        
+        return view('cadastroorgaos');
+    }
+    
+    public function doadoressangue() {
+        
+        return view('doadoressangue');
+    }
+    
+    public function doadoresorgaos() {
+        
+        return view('doadoresorgaos');
+    }
+    
+    public function email() {
+        
+        return view('email');
+    }
+    
+    public function sair() {
+        
+        return view('sair');
+    }
+    
+    public function loginadm() {
+        
+        return view('loginadm');
+    }
+    
+    
 }

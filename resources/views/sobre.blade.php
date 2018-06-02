@@ -33,8 +33,7 @@
                     <img style="width: 100px; float: left; border-radius: 50px;" src="{{ asset('img/felipe.jpg') }}">
                     <div style="color: #747474; padding-left: 20%; font: 600 18px/18px 'Candal',sans-serif;">
                         <h1 style="color: #333333; font: 600 20px/35px 'Candal',sans-serif;">Profª Felipe Ghisleni Freitas</h1>
-                        <p style="color: #333333;">Coordenador e Professor nos Cursos de: Administração de Empresas,</p>
-                        <p style="color: #333333;">Ciências Contábeis e Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</p>                            
+                        <p style="color: #333333;">Coordenador e Professor nos Cursos de: Administração de Empresas, Ciências Contábeis e Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</p>                           
                         <p style="color: #333333;">Contato: felipeghisleni@gmail.com</p>
                     </div>
                 </div>

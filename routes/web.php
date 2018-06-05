@@ -66,3 +66,5 @@ Route::any('loginadm',[
    'uses' => 'HomeController@loginadm'
 ]);
 
+Route::resource('doador', 'MessageController');
+

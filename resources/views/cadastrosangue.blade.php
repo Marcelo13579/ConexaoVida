@@ -14,7 +14,7 @@
             </div>
 
             <div class="well">
-                <form method="post" id="form" name="form" action="cadastro_incluir.php" class="bs-example form-horizontal">
+                <form method="post" id="form" name="form" action="{{ route('doador.store') }}" class="bs-example form-horizontal">
                     <fieldset>
                         <div class="form-group">
                             <div class="col-lg-9">

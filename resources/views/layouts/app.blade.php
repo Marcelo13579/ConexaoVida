@@ -42,7 +42,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ route('loginadm') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    <li><a href="{{ route('sair') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> Sair</a></li>
+                    <li><a href="{{ route('sair') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;"><span></span> Sair</a></li>
                 </ul>
             </div>
         </nav>

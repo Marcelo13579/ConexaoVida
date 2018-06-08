@@ -68,3 +68,5 @@ Route::any('loginadm',[
 
 Route::resource('doador', 'MessageController');
 
+Route::resource('orgaos', 'OrgaosController');
+

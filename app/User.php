@@ -31,4 +31,9 @@ class User extends Authenticatable
    return $this->hasMany('\conexaovida\Doador');
 }
 
+public function orgaos() {
+    
+    return $this->hasMany('\conexaovida\Orgaos');
+}
+
 }

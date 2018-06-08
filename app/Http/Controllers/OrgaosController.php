@@ -2,18 +2,19 @@
 
 namespace conexaovida\Http\Controllers;
 
-use conexaovida\Doador;
+use conexaovida\Orgaos;
 use Illuminate\Http\Request;
 
-class MessageController extends Controller {
-
+class OrgaosController extends Controller
+{
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
-        
+    public function index()
+    {
+        //
     }
 
     /**
@@ -21,7 +22,8 @@ class MessageController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() {
+    public function create()
+    {
         //
     }
 
@@ -31,30 +33,32 @@ class MessageController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
-        
-        \conexaovida\Doador::create($request->all());
+    public function store(Request $request)
+    {
+        \conexaovida\Orgaos::create($request->all());
 
-        return redirect()->route('cadastrosangue');
+        return redirect()->route('cadastroorgaos');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \conexaovida\Message  $message
+     * @param  \conexaovida\Orgaos  $orgaos
      * @return \Illuminate\Http\Response
      */
-    public function show(Doador $message) {
+    public function show(Orgaos $orgaos)
+    {
         //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \conexaovida\Message  $message
+     * @param  \conexaovida\Orgaos  $orgaos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Doador $message) {
+    public function edit(Orgaos $orgaos)
+    {
         //
     }
 
@@ -62,21 +66,22 @@ class MessageController extends Controller {
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \conexaovida\Message  $message
+     * @param  \conexaovida\Orgaos  $orgaos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Doador $message) {
+    public function update(Request $request, Orgaos $orgaos)
+    {
         //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \conexaovida\Message  $message
+     * @param  \conexaovida\Orgaos  $orgaos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Doador $message) {
+    public function destroy(Orgaos $orgaos)
+    {
         //
     }
-
 }

@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+       factory('conexaovida\Doador', 10)->create();
+       
+       factory('conexaovida\Orgaos', 10)->create();
     }
 }

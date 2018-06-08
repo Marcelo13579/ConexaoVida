@@ -13,11 +13,41 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(conexaovida\User::class, function (Faker $faker) {
+$factory->define(conexaovida\Doador::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-        'remember_token' => str_random(10),
+        'nome' => $faker->name,
+        'cpf' => $faker->numerify(),
+        'nascimento' => $faker->date(),
+        'estado' => $faker->country,
+        'cidade' => $faker->city, 
+        'endereco' => $faker->streetName,
+        'genero' => $faker->boolean,
+        'tiposanguineo' => $faker->title,
+        'emailprincipal' => $faker->email,
+        'emailalternativo' => $faker->email,
+        'numerowhatsapp' => $faker->phoneNumber,
+        'outrocontato' => $faker->phoneNumber,
+        'dataultimadoacao' => $faker->date(),
+        'localultimadoacao' => $faker->locale,
+    ];
+});
+
+$factory->define(conexaovida\Orgaos::class, function (Faker $faker) {
+    return [
+        'nome' => $faker->name,
+        'cpf' => $faker->numerify(),
+        'nascimento' => $faker->date(),
+        'estado' => $faker->country,
+        'cidade' => $faker->city, 
+        'endereco' => $faker->streetName,
+        'genero' => $faker->boolean,
+        'tiposanguineo' => $faker->text,
+        'orgaos' => $faker->text,
+        'observacoes' => $faker->boolean,
+        'emailprincipal' => $faker->email,
+        'emailalternativo' => $faker->email,
+        'numerowhatsapp' => $faker->phoneNumber,
+        'outrocontato' => $faker->phoneNumber,
+       
     ];
 });

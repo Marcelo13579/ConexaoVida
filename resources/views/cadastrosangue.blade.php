@@ -51,36 +51,7 @@
                                 Estado<span style="color: red;">*</span>
                             </label>
                             <div class="col-lg-3">
-                                <select id="estado" name="estado" class="form-control">
-                                    <option value=""><span>-- Selecione --</span></option>
-                                    <option value="Acre">Acre</option>
-                                    <option value="Alagoas">Alagoas</option>
-                                    <option value="Amazonas">Amazonas</option>
-                                    <option value="Amapá">Amap&aacute;</option>
-                                    <option value="Bahia">Bahia</option>
-                                    <option value="Ceará">Cear&aacute;</option>
-                                    <option value="Distrito Federal">Distrito Federal</option>
-                                    <option value="Espírito Santo">Esp&iacute;rito Santo</option>
-                                    <option value="Goiás">Goi&aacute;s</option>
-                                    <option value="Maranhão">Maranh&atilde;o</option>
-                                    <option value="Minas Gerais">Minas Gerais</option>
-                                    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-                                    <option value="Mato Grosso">Mato Grosso</option>
-                                    <option value="Pará">Par&aacute;</option>
-                                    <option value="Paraíba">Para&iacute;ba</option>
-                                    <option value="Pernambuco">Pernambuco</option>
-                                    <option value="Piauí">Piau&iacute;</option>
-                                    <option value="Paraná">Paran&aacute;</option>
-                                    <option value="Rio de Janeiro">Rio de Janeiro</option>
-                                    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-                                    <option value="Rondônia">Rond&ocirc;nia</option>
-                                    <option value="Roraima">Roraima</option>
-                                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-                                    <option value="Santa Catarina">Santa Catarina</option>
-                                    <option value="Sergipe">Sergipe</option>
-                                    <option value="São Paulo">S&atilde;o Paulo</option>
-                                    <option value="Tocantins">Tocantins</option>
-                                </select>							
+                                <input class="form-control" id="estado" name="estado" type="text">				
                             </div>
                             <label for="cidade" class="col-lg-2 control-label">
                                 Cidade<span style="color: red;">*</span>

@@ -32,6 +32,27 @@
                     <th>Local Última Doação</th>
                 </tr>
             </thead>
+             <tbody>
+               @foreach($doadores as $doador)
+                   <tr>
+                       <th>{{ $doador->id_doador }}</th>
+                       <td>{{ $doador->nome }}</td>
+                       <td>{{ $doador->cpf }}</td>
+                       <td>{{ $doador->nascimento }}</td>
+                       <td>{{ $doador->estado }}</td>
+                       <td>{{ $doador->cidade }}</td>
+                       <td>{{ $doador->endereco }}</td>
+                       <td>{{ $doador->genero }}</td>
+                       <td>{{ $doador->tiposanguineo }}</td>
+                       <td>{{ $doador->emailprincipal }}</td>
+                       <td>{{ $doador->emailalternativo }}</td>
+                       <td>{{ $doador->numerowhatsapp }}</td>
+                       <td>{{ $doador->outrocontato }}</td>
+                       <td>{{ $doador->dataultimadoacao }}</td>
+                       <td>{{ $doador->localultimadoacao }}</td>
+                   </tr>
+               @endforeach
+               </tbody>
             </table>
         </div>
         </div>

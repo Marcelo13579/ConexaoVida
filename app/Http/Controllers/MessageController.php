@@ -14,6 +14,10 @@ class MessageController extends Controller {
      */
     public function index() {
         
+        $doadores = Doador::all()->sortByDesc("id");
+
+        
+       return view('doadoressangue', ['doadores' => $doadores]);
     }
 
     /**

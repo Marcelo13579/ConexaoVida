@@ -36,8 +36,8 @@
                     <li><a href="{{ route('sobre') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Sobre</a></li>
                     <li><a href="{{ route('cadastrosangue') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Sangue</a></li>
                     <li><a href="{{ route('cadastroorgaos') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Orgãos</a></li>
-                    <li><a href="{{ route('doadoressangue') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Sangue</a></li>
-                    <li><a href="{{ route('doadoresorgaos') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Orgãos</a></li>
+                    <li><a href="{{ route('doador.index') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Sangue</a></li>
+                    <li><a href="{{ route('orgaos.index') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Orgãos</a></li>
                     <li><a href="{{ route('email') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">E-mail</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

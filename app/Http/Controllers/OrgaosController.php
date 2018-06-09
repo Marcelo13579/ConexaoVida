@@ -85,6 +85,10 @@ class OrgaosController extends Controller
      */
     public function destroy(Orgaos $orgaos)
     {
+        
+        $orgaos->delete();
+ 
+       return $this->index();
         //
     }
 }

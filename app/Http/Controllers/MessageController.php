@@ -59,7 +59,10 @@ class MessageController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit(Doador $message) {
-        //
+        
+        
+        return view('editdoadoressangue', array('doador' => $message));
+
     }
 
     /**
@@ -70,7 +73,10 @@ class MessageController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Doador $message) {
-        //
+        
+        
+        $message->update($request->all());
+       return $this->index();
     }
 
     /**
@@ -80,7 +86,12 @@ class MessageController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy(Doador $message) {
-        //
+        
+        
+        
+        $message->delete();
+ 
+       return $this->index();
     }
 
 }

@@ -85,12 +85,10 @@ class MessageController extends Controller {
      * @param  \conexaovida\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Doador $message) {
-        
-        
-        
-        $message->delete();
- 
+    public function destroy($id) {
+
+        Doador::destroy($id);
+
        return $this->index();
     }
 

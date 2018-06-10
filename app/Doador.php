@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Doador extends Model
 {
     protected $table = 'doadores';
+    protected $primaryKey = 'id_doador';
     protected $guarded = [];
     
     protected $fillable = ['id_doador', 'nome', 'cpf', 'nascimento', 'estado', 'cidade', 'endereco', 'genero', 'tiposanguineo', 'emailprincipal', 'emailalternativo', 'numerowhatsapp', 'outrocontato', 'dataultimadoacao', 'localultimadoacao'];

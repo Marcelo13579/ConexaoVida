@@ -83,12 +83,10 @@ class OrgaosController extends Controller
      * @param  \conexaovida\Orgaos  $orgaos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Orgaos $orgaos)
-    {
-        
-        $orgaos->delete();
- 
+    public function destroy($id) {
+
+        Orgaos::destroy($id);
+
        return $this->index();
-        //
     }
 }

@@ -11,8 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       factory('conexaovida\Doador', 10)->create();
+       factory('conexaovida\Doador', 100)->create();
        
-       factory('conexaovida\Orgaos', 10)->create();
+       factory('conexaovida\Orgaos', 100)->create();
     }
 }

@@ -30,6 +30,7 @@ class CreateOrgaosTable extends Migration
             $table->string('numerowhatsapp');
             $table->string('outrocontato');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

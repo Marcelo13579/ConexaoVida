@@ -198,7 +198,7 @@
                     <br/><br/>
                     <div class="form-group">
                         <div class="col-lg-3">
-                            <button type="submit" name="submit" id="submit" class="btn btn-danger">Cadastrar</button> 
+                            <button type="submit" name="submit" id="submit" class="btn btn-danger">Alterar Dados</button> 
                         </div>
                     </div>
                 </form>

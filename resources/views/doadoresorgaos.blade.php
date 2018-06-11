@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">   
+        <div class="col-lg-12">
             <div>
 
                 <div class="col-lg-12">
@@ -13,7 +13,7 @@
                     </div>
 
                     <table class="table table-bordered">
-                        <thead> 
+                        <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Nome</th>
@@ -62,6 +62,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <div align="center">
+                        {!! $orgaos->links() !!}
+                    </div>
                 </div>
             </div>
         </div>

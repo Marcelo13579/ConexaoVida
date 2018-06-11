@@ -30,6 +30,7 @@ class CreateDoadoresTable extends Migration
             $table->string('dataultimadoacao');
             $table->string('localultimadoacao');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

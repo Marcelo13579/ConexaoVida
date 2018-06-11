@@ -14,7 +14,9 @@ class MessageController extends Controller {
      */
     public function index() {
         
-        $doadores = Doador::all()->sortByDesc("id");
+        $doadores = Doador::orderBy('id_doador', 'desc')->paginate(15);
+        
+        //$doadores = Doador::all()->sortByDesc("id");
 
         
        return view('doadoressangue', ['doadores' => $doadores]);

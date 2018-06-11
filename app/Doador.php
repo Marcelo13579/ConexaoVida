@@ -4,8 +4,16 @@ namespace conexaovida;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Doador extends Model
 {
+    
+    use SoftDeletes;
+ 
+    
+    protected $dates = ['deleted_at'];
+    
     protected $table = 'doadores';
     protected $primaryKey = 'id_doador';
     protected $guarded = [];

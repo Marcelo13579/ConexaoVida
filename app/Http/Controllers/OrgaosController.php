@@ -14,7 +14,7 @@ class OrgaosController extends Controller
      */
     public function index()
     {
-        $orgaos = Orgaos::all()->sortByDesc("id");
+        $orgaos = Orgaos::orderBy('id_doador', 'desc')->paginate(15);
 
         
        return view('doadoresorgaos', ['orgaos' => $orgaos]);

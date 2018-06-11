@@ -11,7 +11,6 @@
                     <div class="bs-example">
                         <h1>Doadores de Sangue</h1>
                     </div>
-
                     <table class="table table-bordered">
                         <thead> 
                             <tr>
@@ -59,7 +58,7 @@
                                             Apagar
                                         </button>
                                     </form>
-                                    
+
                                     <form action="{{ route('doador.edit', $doador->id_doador) }}" method="POST">
 
                                         {{ csrf_field() }}
@@ -74,6 +73,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <div align="center">
+                        {!! $doadores->links() !!}
+                    </div>
                 </div>
             </div>
         </div>

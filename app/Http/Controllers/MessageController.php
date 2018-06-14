@@ -60,10 +60,12 @@ class MessageController extends Controller {
      * @param  \conexaovida\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function edit(Doador $message) {
+    public function edit($id) {
         
         
-        return view('editdoadoressangue', array('doador' => $message));
+        $doador =  Doador::find($id);
+        
+        return view('editdoadoressangue', array('doador' => $doador));
 
     }
 
@@ -74,10 +76,10 @@ class MessageController extends Controller {
      * @param  \conexaovida\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Doador $message) {
+    public function update(Request $request, Doador $doador) {
         
         
-        $message->update($request->all());
+        $doador->update($request->all());
        return $this->index();
     }
 

@@ -60,11 +60,14 @@ class OrgaosController extends Controller
      * @param  \conexaovida\Orgaos  $orgaos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Orgaos $orgaos)
-    {
-        //
-    }
+      public function edit($id) {
+        
+        
+        $orgaos = Orgaos::find($id);
+        
+        return view('editdoadoresorgaos', array('orgao' => $orgaos));
 
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -72,11 +75,12 @@ class OrgaosController extends Controller
      * @param  \conexaovida\Orgaos  $orgaos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Orgaos $orgaos)
-    {
-        //
+   public function update(Request $request, Orgaos $orgao) {
+        
+        
+        $orgao->update($request->all());
+       return $this->index();
     }
-
     /**
      * Remove the specified resource from storage.
      *

@@ -15,6 +15,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th>Operações</th>
                                 <th>#</th>
                                 <th>Nome</th>
                                 <th>CPF</th>
@@ -35,6 +36,22 @@
                         <tbody>
                             @foreach($orgaos as $orgao)
                             <tr>
+                                <td><form action="{{ route('orgaos.destroy', $orgao->id_doador) }}" method="POST">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button class="btn btn-danger" onclick="return confirm('Deseja mesmo excluir?')">
+                                            Apagar
+                                        </button>
+                                    </form>
+                                    <form action="{{ route('orgaos.edit', $orgao->id_doador) }}" method="POST">
+
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="_method" value="GET">
+                                        <button class="btn btn-info">
+                                            Editar
+                                        </button>
+                                    </form>
+                                </td>
                                 <th>{{ $orgao->id_doador }}</th>
                                 <td>{{ $orgao->nome }}</td>
                                 <td>{{ $orgao->cpf }}</td>
@@ -50,13 +67,8 @@
                                 <td>{{ $orgao->emailalternativo }}</td>
                                 <td>{{ $orgao->numerowhatsapp }}</td>
                                 <td>{{ $orgao->outrocontato }}</td>
-                                <td><form action="{{ route('orgaos.destroy', $orgao->id_doador) }}" method="POST">
-                                        {{ csrf_field() }}
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button class="btn btn-danger" onclick="return confirm('Deseja mesmo excluir?')">
-                                            Apagar
-                                        </button>
-                                    </form></td>
+                                
+                                    
 
                             </tr>
                             @endforeach

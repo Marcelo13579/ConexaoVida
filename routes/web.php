@@ -70,3 +70,8 @@ Route::resource('doador', 'MessageController');
 
 Route::resource('orgaos', 'OrgaosController');
 
+Route::any('emailEnviar',[
+   'as' => 'doador.email',
+   'uses' => 'MessageController@email'
+]);
+

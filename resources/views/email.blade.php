@@ -12,8 +12,8 @@
 
             <div style="padding-top: 30px;"></div>
 
-            <form method="post" id="form" name="form" class="bs-example form-horizontal">
-
+            <form method="post" id="form" name="form" class="bs-example form-horizontal" action="{{ route('doador.email') }}">
+                {{ csrf_field() }} 
                 <div class="form-group">
 
                     <label class="col-md-4 control-label">Tipo Sanguíneo<b style="color: red; font-size: 20px;">*</b></label>
@@ -37,7 +37,7 @@
                     <label class="col-md-4 control-label">Assunto<b style="color: red; font-size: 20px;">*</b></label>
                     <div class="col-md-4">
 
-                        <input class="form-control" id="assunto" name="assunto" placeholder="" type="text"  value=""/>
+                        <input class="form-control" id="assunto" name="assunto" placeholder="" type="text"/>
 
                     </div>
                 </div>

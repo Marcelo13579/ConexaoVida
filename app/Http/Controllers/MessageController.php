@@ -95,5 +95,15 @@ class MessageController extends Controller {
 
        return $this->index();
     }
+    
+    public function email(Request $r) {
+        
+  //      dd($r->input('gruposanguineo'));
+  dd(\conexaovida\Doador::all());
+//              "gruposanguineo" => "A-"
+//      "assunto" => "weqweqwe"
+//      "mensagem" => "qweqwe"
+//      "submit" => null
+    }
 
 }

@@ -32,9 +32,9 @@
                     <div style="float: left;">
                         <img src="{{ asset('img/conexãovidamenu.png') }}">
                     </div>
-                    <li><a href="{{ route('inicio') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Início</a></li>
-                    <li><a href="{{ route('sobre') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Sobre</a></li>
-                    <li><a href="{{ route('cadastrosangue') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Sangue</a></li>
+                    <li><a href="{{ route('inicio') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">INÍCIO</a></li>
+                    <li><a href="{{ route('sobre') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">SOBRE</a></li>
+                    <li><a href="{{ route('cadastrosangue') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">CADASTRO SANGUE</a></li>
                     <li><a href="{{ route('cadastroorgaos') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Orgãos</a></li>
                     <li><a href="{{ route('doador.index') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Sangue</a></li>
                     <li><a href="{{ route('orgaos.index') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Orgãos</a></li>

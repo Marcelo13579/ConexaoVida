@@ -35,14 +35,14 @@
                     <li><a href="{{ route('inicio') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">INÍCIO</a></li>
                     <li><a href="{{ route('sobre') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">SOBRE</a></li>
                     <li><a href="{{ route('cadastrosangue') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">CADASTRO SANGUE</a></li>
-                    <li><a href="{{ route('cadastroorgaos') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Cadastro Orgãos</a></li>
-                    <li><a href="{{ route('doador.index') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Sangue</a></li>
-                    <li><a href="{{ route('orgaos.index') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">Doadores Orgãos</a></li>
-                    <li><a href="{{ route('email') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;">E-mail</a></li>
+                    <li><a href="{{ route('cadastroorgaos') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">CADASTRO ORGÃOS</a></li>
+                    <li><a href="{{ route('doador.index') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">DOADORES SANGUE</a></li>
+                    <li><a href="{{ route('orgaos.index') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">DOADORES ORGÃOS</a></li>
+                    <li><a href="{{ route('email') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">E-MAIL</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ route('loginadm') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    <li><a href="{{ route('sair') }}" style="color: black; font-weight: bold; font-size: 20px; padding-top: 25px;"><span></span> Sair</a></li>
+                    <li><a href="{{ route('loginadm') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> ÁREA RESTRITA</a></li>
+                    <li><a href="{{ route('sair') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;"><span></span> Sair</a></li>
                 </ul>
             </div>
         </nav>

@@ -37,9 +37,14 @@ class MessageController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(\conexaovida\Http\Requests\DoadorRequest $request) {
 
         \conexaovida\Doador::create($request->all());
+        
+        \Session::flash('flash_message', [
+       'message'=>'Usuário cadastrado com sucesso!',
+       'class'=>'alert-success'
+   ]);
 
         return redirect()->route('cadastrosangue');
     }
@@ -116,5 +121,7 @@ class MessageController extends Controller {
                 $enviaremail = mail($usuario['emailprincipal'], $assunto, $mensagem, $headers);
             }
         }
+        
+        return view('email');
     }
 }

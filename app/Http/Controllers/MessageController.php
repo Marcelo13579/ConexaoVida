@@ -40,11 +40,11 @@ class MessageController extends Controller {
     public function store(\conexaovida\Http\Requests\DoadorRequest $request) {
 
         \conexaovida\Doador::create($request->all());
-        
+
         \Session::flash('flash_message', [
-       'message'=>'Usuário cadastrado com sucesso!',
-       'class'=>'alert-success'
-   ]);
+            'message' => 'Usuário cadastrado com sucesso!',
+            'class' => 'alert-success'
+        ]);
 
         return redirect()->route('cadastrosangue');
     }
@@ -117,11 +117,55 @@ class MessageController extends Controller {
         foreach ($resultado as $usuario) {
 
             if ($gruposanguineo == $usuario['tiposanguineo']) {
-                
+
                 $enviaremail = mail($usuario['emailprincipal'], $assunto, $mensagem, $headers);
             }
         }
-        
+
         return view('email');
     }
+
+    public function admin(Request $r) {
+
+        $usuario = $r->input('usuario');
+
+        $senha = $r->input('senha');
+
+        if ($usuario != "conexao2017") {
+
+            \Session::flash('flash_message', [
+                'message' => 'Usuário incorreto!',
+                'class' => 'alert-success'
+            ]);
+        }
+
+        if (password_verify($senha, '$2y$10$fLrxYdFLwIQZa1fBN8rA7OaqUOpyqhr2Vts0G6ttN00qokpXMxTwm')) {
+
+            \Session::flash('flash_message', [
+                'message' => 'Senha correta!',
+                'class' => 'alert-success'
+            ]);
+        } else {
+
+            \Session::flash('flash_message', [
+                'message' => 'Senha incorreta!',
+                'class' => 'alert-success'
+            ]);
+        }
+
+        if ($usuario == "conexao2017" && password_verify($senha, '$2y$10$fLrxYdFLwIQZa1fBN8rA7OaqUOpyqhr2Vts0G6ttN00qokpXMxTwm')) {
+
+                // Store a piece of data in the session...
+                $sessao = session(['admin' => true]);
+            
+            \Session::flash('flash_message', [
+                'message' => 'Login efetuado com sucesso!',
+                'class' => 'alert-success'
+            ]);
+        }
+
+
+        return view('welcome');
+    }
+
 }

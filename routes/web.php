@@ -56,10 +56,10 @@ Route::any('email',[
    'uses' => 'HomeController@email'
 ]);
 
-Route::any('sair',[
-   'as' => 'sair',
-   'uses' => 'HomeController@sair'
-]);
+//Route::any('sair',[
+//   'as' => 'sair',
+//   'uses' => 'HomeController@sair'
+//]);
 
 Route::any('loginadm',[
    'as' => 'loginadm',
@@ -73,5 +73,10 @@ Route::resource('orgaos', 'OrgaosController');
 Route::any('emailEnviar',[
    'as' => 'doador.email',
    'uses' => 'MessageController@email'
+]);
+
+Route::any('admin',[
+   'as' => 'doador.admin',
+   'uses' => 'MessageController@admin'
 ]);
 

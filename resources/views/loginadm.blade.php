@@ -4,6 +4,10 @@
 
 <div class="container">
     <div class="row">
+        
+        <div align="center" class="alert {{ Session::get('flash_message')['class'] }}">
+                       {{ Session::get('flash_message')['message'] }}
+                   </div>
 
 
         <div style="padding-top: 70px;"></div>
@@ -13,8 +17,9 @@
                     <img src="{{ asset('img/conexãovida.png') }}" width="50%" style="display: block; margin-left: auto; margin-right: auto;">
                 </div>
                 <div class="panel-body">
-                    <form role="form" method="POST" action="index2.php" name="form" id="form">
+                    <form role="form" method="POST" action="{{ route('doador.admin') }}" name="form" id="form">
                         <fieldset>
+                            {{ csrf_field() }} 
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <input class="form-control" type="text" placeholder="Usuário" name="usuario" type="usuario" autocomplete="off" autofocus>

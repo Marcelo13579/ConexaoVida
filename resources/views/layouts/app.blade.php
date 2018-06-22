@@ -36,13 +36,34 @@
                     <li><a href="{{ route('sobre') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">SOBRE</a></li>
                     <li><a href="{{ route('cadastrosangue') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">CADASTRO SANGUE</a></li>
                     <li><a href="{{ route('cadastroorgaos') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">CADASTRO ORGÃOS</a></li>
-                    <li><a href="{{ route('doador.index') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">DOADORES SANGUE</a></li>
-                    <li><a href="{{ route('orgaos.index') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">DOADORES ORGÃOS</a></li>
-                    <li><a href="{{ route('email') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">E-MAIL</a></li>
+                    <?php
+                    session_start();
+                    if (session('admin')) {
+                        ?>
+                        <li><a href="{{ route('doador.index') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">DOADORES SANGUE</a></li>
+                        <li><a href="{{ route('orgaos.index') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">DOADORES ORGÃOS</a></li>
+                        <?php
+                    }
+                    ?>
+                    <?php
+                    if (session('admin')) {
+                        ?>
+                        <li><a href="{{ route('email') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;">E-MAIL</a></li>
+                        <?php
+                    }
+                    ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ route('loginadm') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> ÁREA RESTRITA</a></li>
-                    <li><a href="{{ route('sair') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;"><span></span> Sair</a></li>
+                    <?php
+                    if (session('admin')) {
+                        ?>
+                        <li><a href="{{ route('logout') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form></li>
+                        <?php
+                    }
+                    ?>
                 </ul>
             </div>
         </nav>
@@ -63,19 +84,19 @@
 </html>
 
 <script type="text/javascript">
-var _paq = _paq || [];
-/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-_paq.push(['trackPageView']);
-_paq.push(['enableLinkTracking']);
-(function () {
-    var u = "//kraft.ads.cnecsan.edu.br/piwik/";
-    _paq.push(['setTrackerUrl', u + 'piwik.php']);
-    _paq.push(['setSiteId', '6']);
-    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-    g.type = 'text/javascript';
-    g.async = true;
-    g.defer = true;
-    g.src = u + 'piwik.js';
-    s.parentNode.insertBefore(g, s);
-})();
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+        var u = "//kraft.ads.cnecsan.edu.br/piwik/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        _paq.push(['setSiteId', '6']);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'piwik.js';
+        s.parentNode.insertBefore(g, s);
+    })();
 </script>

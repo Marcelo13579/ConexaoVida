@@ -23,8 +23,10 @@ class DoadorRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
-            'nome' => 'required|max:150'
+            'nome' => 'required|max:150',
+            'cpf' => 'required|max:11'
         ];
         
         
@@ -32,11 +34,14 @@ class DoadorRequest extends FormRequest
     
     
     
-    public function doador()
+    public function messages()
 {
+        
    return [
        'nome.required' => 'Campo Obrigatório!',
-       'nome.max' => 'Tamanho máximo 150 caracteres!'
+       'nome.max' => 'Tamanho máximo 150 caracteres!',
+       'cpf.required' => 'Campo Obrigatório!',
+       
    ];
 }
 

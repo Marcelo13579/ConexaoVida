@@ -30,7 +30,7 @@
                                 <div class="form-group {{ $errors->has('nome') ? 'has-error' : '' }}">
                                     <label class="col-lg-2 control-label">Nome<span style="color: red;">*</span></label>
                                     <div class="col-lg-8">
-                                        <input onkeypress="valida_nome();" class="form-control" id="nome" name="nome" placeholder="Nome" type="text"  value="" maxlength="40" autofocus="" />
+                                        <input class="form-control" id="nome" name="nome" placeholder="Nome" type="text" autofocus="" />
                                         @if($errors->has('nome'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('nome') }}</strong>
@@ -40,10 +40,15 @@
                                 </div>
 
                                 <input type="hidden" id="action" name="action" value="salvar" />
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('cpf') ? 'has-error' : '' }}">
                                     <label for="cpf" class="col-lg-2 control-label">CPF<span style="color: red;">*</span></label>
                                     <div class="col-lg-8">
-                                        <input onkeypress="valida_cpf();" class="form-control" id="cpf" name="cpf" placeholder="12345678910" type="text"  value="" maxlength="11" autofocus="" />
+                                        <input onkeypress="valida_cpf();" class="form-control" id="cpf" name="cpf" placeholder="12345678910" type="text" minlength="11" maxlength="11" autofocus="" />
+                                   @if($errors->has('cpf'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('cpf') }}</strong>
+                                        </span>
+                                        @endif
                                     </div>
                                 </div>
 

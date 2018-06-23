@@ -6,8 +6,8 @@
     <div class="row">
         <div class="col-lg-12">   
             <div align="center" class="alert {{ Session::get('flash_message')['class'] }}">
-                       {{ Session::get('flash_message')['message'] }}
-                   </div>
+                {{ Session::get('flash_message')['message'] }}
+            </div>
             <div>
                 <div class="col-lg-2">
                 </div>
@@ -43,8 +43,8 @@
                                 <div class="form-group {{ $errors->has('cpf') ? 'has-error' : '' }}">
                                     <label for="cpf" class="col-lg-2 control-label">CPF<span style="color: red;">*</span></label>
                                     <div class="col-lg-8">
-                                        <input onkeypress="valida_cpf();" class="form-control" id="cpf" name="cpf" placeholder="12345678910" type="text" minlength="11" maxlength="11" autofocus="" />
-                                   @if($errors->has('cpf'))
+                                        <input onkeypress="valida_cpf();" class="form-control" id="cpf" name="cpf" placeholder="12345678910" type="text" autofocus="" />
+                                        @if($errors->has('cpf'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('cpf') }}</strong>
                                         </span>
@@ -52,19 +52,29 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('nascimento') ? 'has-error' : '' }}" >
                                     <label for="dia" class="col-lg-2 control-label">Nascimento<span style="color: red;">*</span></label>
                                     <div class="col-lg-8">
                                         <input type="date" name="nascimento" id="nascimento" class="form-control">
+                                        @if($errors->has('nascimento'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('nascimento') }}</strong>
+                                        </span>
+                                        @endif
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('estado') ? 'has-error' : '' }}">
                                     <label for="estado" class="col-lg-2 control-label">
                                         Estado<span style="color: red;">*</span>
                                     </label>
                                     <div class="col-lg-3">
                                         <input class="form-control" id="estado" name="estado" type="text">				
+                                        @if($errors->has('estado'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('estado') }}</strong>
+                                        </span>
+                                        @endif
                                     </div>
                                     <label for="cidade" class="col-lg-2 control-label">
                                         Cidade<span style="color: red;">*</span>
@@ -72,14 +82,24 @@
                                     <div class="col-lg-3">
                                         <div id="divCidade"  >
                                             <input class="form-control" id="cidade" name="cidade" type="text">
+                                            @if($errors->has('cidade'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('cidade') }}</strong>
+                                            </span>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('endereco') ? 'has-error' : '' }}">
                                     <label for="endereco" class="col-lg-2 control-label">Endereço<span style="color: red;">*</span></label>
                                     <div class="col-lg-8">
                                         <input class="form-control" id="endereco" name="endereco" placeholder="Endereço" type="text"  value="" maxlength="100" autofocus="" />
+                                        @if($errors->has('endereco'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('endereco') }}</strong>
+                                        </span>
+                                        @endif
                                     </div>
                                 </div>
 
@@ -114,12 +134,17 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('emailprincipal') ? 'has-error' : '' }}">
                                     <label for="emailprincipal" class="col-lg-2 control-label">
                                         E-mail Principal<span style="color: red;">*</span>
                                     </label>
                                     <div class="col-lg-8">
                                         <input  type="text" class="form-control" placeholder="emailprincipal" id="emailPrincipal" name="emailprincipal" size="50" value="" />
+                                        @if($errors->has('emailprincipal'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('emailprincipal') }}</strong>
+                                        </span>
+                                        @endif
                                     </div>
                                 </div>
 
@@ -133,10 +158,15 @@
                                 </div>
 
                                 <input type="hidden" id="action" name="action" value="salvar" />
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('numerowhatsapp') ? 'has-error' : '' }}">
                                     <label for="numerowhatsapp" class="col-lg-2 control-label">Número de WhatsApp<span style="color: red;">*</span></label>
                                     <div class="col-lg-8">
                                         <input class="form-control" id="numerowhatsapp" name="numerowhatsapp" placeholder="55999999999" type="text"  value="" maxlength="15" autofocus="" />
+                                        @if($errors->has('numerowhatsapp'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('numerowhatsapp') }}</strong>
+                                        </span>
+                                        @endif
                                     </div>
                                 </div>
 

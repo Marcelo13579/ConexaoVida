@@ -4,7 +4,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">   
+        <div class="col-lg-12"> 
+            <div align="center" class="alert {{ Session::get('cadastroorgao')['class'] }}">
+                {{ Session::get('cadastroorgao')['message'] }}
+            </div>
              <div>
         <div class="col-lg-2">
         </div>

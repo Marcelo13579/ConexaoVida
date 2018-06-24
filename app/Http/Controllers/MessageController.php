@@ -14,12 +14,15 @@ class MessageController extends Controller {
      */
     public function index() {
 
-        $doadores = Doador::orderBy('id_doador', 'desc')->paginate(15);
+        if (session('admin')) {
 
-        //$doadores = Doador::all()->sortByDesc("id");
+            $doadores = Doador::orderBy('id_doador', 'desc')->paginate(15);
+
+            //$doadores = Doador::all()->sortByDesc("id");
 
 
-        return view('doadoressangue', ['doadores' => $doadores]);
+            return view('doadoressangue', ['doadores' => $doadores]);
+        }
     }
 
     /**
@@ -41,7 +44,7 @@ class MessageController extends Controller {
 
         \conexaovida\Doador::create($request->all());
 
-        \Session::flash('flash_message', [
+        \Session::flash('cadastrosangue', [
             'message' => 'Usuário cadastrado com sucesso!',
             'class' => 'alert-success'
         ]);
@@ -68,9 +71,12 @@ class MessageController extends Controller {
     public function edit($id) {
 
 
-        $doador = Doador::find($id);
+        if (session('admin')) {
 
-        return view('editdoadoressangue', array('doador' => $doador));
+            $doador = Doador::find($id);
+
+            return view('editdoadoressangue', array('doador' => $doador));
+        }
     }
 
     /**
@@ -82,9 +88,16 @@ class MessageController extends Controller {
      */
     public function update(Request $request, Doador $doador) {
 
+         if (session('admin')) {
 
         $doador->update($request->all());
+        
+        \Session::flash('flash_message', [
+            'message' => 'Dados alterados com sucesso!',
+            'class' => 'alert-success'
+        ]);
         return $this->index();
+         }
     }
 
     /**
@@ -94,13 +107,25 @@ class MessageController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy($id) {
+        
+        if (session('admin')) {
 
         Doador::destroy($id);
+        
+         \Session::flash('flash_message', [
+            'message' => 'Dados excluídos com sucesso!',
+            'class' => 'alert-success'
+        ]);
 
         return $this->index();
+        }
     }
 
     public function email(Request $r) {
+        
+        $enviaremail = null;
+        
+        if (session('admin')) {
 
         $headers = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'From: Conexao Vida <conexaovida.iesa@gmail.com>' . "\r\n";
@@ -121,8 +146,25 @@ class MessageController extends Controller {
                 $enviaremail = mail($usuario['emailprincipal'], $assunto, $mensagem, $headers);
             }
         }
+        
+        if ($enviaremail) {
+        
+         \Session::flash('emailenviar', [
+            'message' => 'E-mail enviado com sucesso!',
+            'class' => 'alert-success'
+        ]);
+        } else {
+            
+            \Session::flash('emailenviar', [
+            'message' => 'Erro ao enviar o e-mail!',
+            'class' => 'alert-success'
+        ]);
+        }
 
         return view('email');
+        
+        
+        }
     }
 
     public function admin(Request $r) {
@@ -137,6 +179,9 @@ class MessageController extends Controller {
                 'message' => 'Usuário incorreto!',
                 'class' => 'alert-success'
             ]);
+            
+            return view('loginadm');
+            
         }
 
         if (password_verify($senha, '$2y$10$fLrxYdFLwIQZa1fBN8rA7OaqUOpyqhr2Vts0G6ttN00qokpXMxTwm')) {
@@ -151,13 +196,15 @@ class MessageController extends Controller {
                 'message' => 'Senha incorreta!',
                 'class' => 'alert-success'
             ]);
+            
+            return view('loginadm');
         }
 
         if ($usuario == "conexao2017" && password_verify($senha, '$2y$10$fLrxYdFLwIQZa1fBN8rA7OaqUOpyqhr2Vts0G6ttN00qokpXMxTwm')) {
 
-                // Store a piece of data in the session...
-                $sessao = session(['admin' => true]);
-            
+            // Store a piece of data in the session...
+            $sessao = session(['admin' => true]);
+
             \Session::flash('flash_message', [
                 'message' => 'Login efetuado com sucesso!',
                 'class' => 'alert-success'

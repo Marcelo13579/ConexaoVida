@@ -63,11 +63,6 @@ class HomeController extends Controller
         return view('email');
     }
     
-    public function sair() {
-        
-        return view('sair');
-    }
-    
     public function loginadm() {
         
         return view('loginadm');

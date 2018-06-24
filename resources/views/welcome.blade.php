@@ -20,6 +20,10 @@
 
         <div class="container">
             <div class="row">
+                <div class="col-lg-12">
+                <div align="center" class="alert {{ Session::get('flash_message')['class'] }}">
+                {{ Session::get('flash_message')['message'] }}
+            </div>
 
                 <div style="margin-left: auto; margin-right: auto; text-align: center;">
                     <img src="{{ asset('img/conexãovida.png') }}">
@@ -39,6 +43,7 @@
                     <img style="width: 150px; border-radius: 20px;" src="{{ asset('img/ADS.png') }}">
                 </div>
 
+            </div>
             </div>
         </div>
     </body>

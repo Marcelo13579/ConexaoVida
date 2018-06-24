@@ -54,8 +54,16 @@
                     ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ route('loginadm') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> ÁREA RESTRITA</a></li>
                     <?php
+                    if (session('admin')) {
+                        
+                    } else {
+                    ?>
+                    <li><a href="{{ route('loginadm') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;"><span class="glyphicon glyphicon-log-in"></span> ÁREA RESTRITA</a></li>
+                   <?php
+                   }
+                   ?>
+ <?php
                     if (session('admin')) {
                         ?>
                         <li><a href="{{ route('logout') }}" style="color: black; font-weight: bold; font-size: 13px; padding-top: 25px;" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>

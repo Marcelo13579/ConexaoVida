@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="bs-example">
-                        <h1>Cadastro de Doadores de </h1>
+                        <h1>Cadastro de Doadores de Orgãos</h1>
                     </div>
 
                     <div class="well">

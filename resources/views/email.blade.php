@@ -4,7 +4,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-12" style="text-align: center;">   
+        <div class="col-lg-12" style="text-align: center;">
+            <div align="center" class="alert {{ Session::get('emailenviar')['class'] }}">
+                {{ Session::get('emailenviar')['message'] }}
+            </div>
             <div class="bs-example" style="text-align: center;">
                 <h1>Envio de E-mails</h1>
                 <span class="colorRed" style="color: red;">* Preenchimento Obrigat&oacute;rio</span>

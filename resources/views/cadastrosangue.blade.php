@@ -5,8 +5,8 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">   
-            <div align="center" class="alert {{ Session::get('flash_message')['class'] }}">
-                {{ Session::get('flash_message')['message'] }}
+            <div align="center" class="alert {{ Session::get('cadastrosangue')['class'] }}">
+                {{ Session::get('cadastrosangue')['message'] }}
             </div>
             <div>
                 <div class="col-lg-2">
